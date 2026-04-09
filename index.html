@@ -1,0 +1,1036 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="吉城客棧 - 花蓮吉安鄉隱藏版美食，限量牛肉麵、豬腳飯、雞腿飯。溫馨客棧環境，道地家常美味。">
+    <meta name="keywords" content="花蓮美食, 吉安鄉餐廳, 牛肉麵, 豬腳飯, 小吃, 客棧">
+    <meta property="og:title" content="吉城客棧 - 花蓮吉安鄉隱藏版美食">
+    <meta property="og:description" content="限量牛肉麵、豬腳飯、雞腿飯。溫馨客棧環境，道地家常美味。">
+    <meta property="og:type" content="business.business">
+    <meta property="og:url" content="https://page5888.github.io/gichen-inn/">
+    <meta name="theme-color" content="#8B4513">
+    <meta name="author" content="花蓮瓊瑤打字行">
+    
+    <title>吉城客棧 - 花蓮吉安鄉隱藏版美食餐廳 | 限量牛肉麵、豬腳飯</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!--
+    ╔════════════════════════════════════════════════════════════════════════════════╗
+    ║                    吉城客棧 - 設計系統基準文件 (Stitch Design MD)              ║
+    ╠════════════════════════════════════════════════════════════════════════════════╣
+    ║                                                                                ║
+    ║ 【品牌分析】                                                                   ║
+    ║ 產業：餐飲服務業 (小吃店/客棧)                                                  ║
+    ║ 氛圍：溫馨、家常、隱藏版美食、在地文化                                          ║
+    ║ 目標客群：美食愛好者、在地居民、旅客                                            ║
+    ║                                                                                ║
+    ║ 【色彩規範 (UI-UX-Pro-Max)】                                                   ║
+    ║ • Primary (主色調)：#8B4513 (Saddle Brown) - 溫暖、厚實、家常感                 ║
+    ║ • Secondary (次色調)：#D4A574 (Tan) - 溫和、親切、食物質感                      ║
+    ║ • Accent (強調色)：#C85A3A (Burnt Sienna) - 活力、食慾、CTA 按鈕               ║
+    ║ • Background (背景)：#FFFBF5 (Floral White) - 溫暖、柔和、高級感               ║
+    ║ • Foreground (文字)：#2C2C2C (Near Black) - 高對比、易讀                       ║
+    ║ • Muted (輔助)：#A89968 (Khaki) - 次要文字、邊框、陰影                         ║
+    ║                                                                                ║
+    ║ 【字體選擇】                                                                   ║
+    ║ • Display Font：Playfair Display (優雅、高級、視覺張力)                        ║
+    ║ • Body Font：Noto Sans TC (易讀、專業、在地感)                                 ║
+    ║                                                                                ║
+    ║ 【設計理念】                                                                   ║
+    ║ • Bolder：大膽留白、強烈視覺對比、非對稱排版                                    ║
+    ║ • Delight：微妙過渡、柔和陰影、互動回饋                                        ║
+    ║ • Accessibility：WCAG AA 標準、語意化 HTML5、完整 aria-label                   ║
+    ║                                                                                ║
+    ╚════════════════════════════════════════════════════════════════════════════════╝
+    -->
+    
+    <style>
+        /* ═══════════════════════════════════════════════════════════════════════════ */
+        /* 語意化 CSS 設計 Token (Shadcn 命名規範)                                      */
+        /* ═══════════════════════════════════════════════════════════════════════════ */
+        
+        :root {
+            /* Primary Colors */
+            --primary: #8B4513;
+            --primary-light: #A0522D;
+            --primary-dark: #704214;
+            
+            /* Secondary Colors */
+            --secondary: #D4A574;
+            --secondary-light: #E8C4A0;
+            --secondary-dark: #C4944A;
+            
+            /* Accent Colors */
+            --accent: #C85A3A;
+            --accent-light: #E07856;
+            --accent-dark: #A84A2A;
+            
+            /* Neutral Colors */
+            --background: #FFFBF5;
+            --foreground: #2C2C2C;
+            --muted: #A89968;
+            --muted-light: #C4B5A0;
+            --muted-dark: #8B7D5F;
+            
+            /* Semantic Colors */
+            --success: #4CAF50;
+            --warning: #FF9800;
+            --error: #F44336;
+            
+            /* Spacing Scale */
+            --spacing-xs: 0.25rem;
+            --spacing-sm: 0.5rem;
+            --spacing-md: 1rem;
+            --spacing-lg: 1.5rem;
+            --spacing-xl: 2rem;
+            --spacing-2xl: 3rem;
+            --spacing-3xl: 4rem;
+            
+            /* Border Radius */
+            --radius-sm: 0.25rem;
+            --radius-md: 0.5rem;
+            --radius-lg: 1rem;
+            --radius-xl: 1.5rem;
+            --radius-full: 9999px;
+            
+            /* Shadows */
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            
+            /* Transitions */
+            --transition-fast: 150ms ease-out;
+            --transition-base: 300ms ease-out;
+            --transition-slow: 500ms ease-out;
+        }
+        
+        /* ═══════════════════════════════════════════════════════════════════════════ */
+        /* 全域樣式                                                                   */
+        /* ═══════════════════════════════════════════════════════════════════════════ */
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Noto Sans TC', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background-color: var(--background);
+            color: var(--foreground);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        /* ═══════════════════════════════════════════════════════════════════════════ */
+        /* 排版系統                                                                   */
+        /* ═══════════════════════════════════════════════════════════════════════════ */
+        
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.5rem, 8vw, 4.5rem);
+            font-weight: 800;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+            color: var(--primary);
+        }
+        
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 700;
+            line-height: 1.2;
+            color: var(--primary);
+            margin-bottom: var(--spacing-xl);
+        }
+        
+        h3 {
+            font-family: 'Noto Sans TC', sans-serif;
+            font-size: clamp(1.25rem, 3vw, 1.75rem);
+            font-weight: 700;
+            color: var(--primary-light);
+            margin-bottom: var(--spacing-md);
+        }
+        
+        p {
+            font-size: 1rem;
+            line-height: 1.8;
+            color: var(--foreground);
+            margin-bottom: var(--spacing-md);
+        }
+        
+        a {
+            color: var(--accent);
+            text-decoration: none;
+            transition: color var(--transition-base);
+        }
+        
+        a:hover {
+            color: var(--accent-light);
+            text-decoration: underline;
+        }
+        
+        a:focus {
+            outline: 2px solid var(--accent);
+            outline-offset: 2px;
+            border-radius: var(--radius-sm);
+        }
+        
+        /* ═══════════════════════════════════════════════════════════════════════════ */
+        /* 按鈕系統                                                                   */
+        /* ═══════════════════════════════════════════════════════════════════════════ */
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: var(--spacing-md) var(--spacing-xl);
+            font-size: 1rem;
+            font-weight: 600;
+            border: none;
+            border-radius: var(--radius-lg);
+            cursor: pointer;
+            transition: all var(--transition-base);
+            text-decoration: none;
+            min-height: 44px;
+            min-width: 44px;
+            gap: var(--spacing-sm);
+        }
+        
+        .btn:focus {
+            outline: 2px solid var(--accent);
+            outline-offset: 2px;
+        }
+        
+        .btn-primary {
+            background-color: var(--accent);
+            color: white;
+            box-shadow: var(--shadow-md);
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--accent-light);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .btn-primary:active {
+            transform: translateY(0);
+        }
+        
+        .btn-secondary {
+            background-color: var(--secondary);
+            color: var(--foreground);
+            border: 2px solid var(--primary);
+        }
+        
+        .btn-secondary:hover {
+            background-color: var(--secondary-light);
+            transform: translateY(-2px);
+        }
+        
+        /* ═══════════════════════════════════════════════════════════════════════════ */
+        /* 卡片系統                                                                   */
+        /* ═══════════════════════════════════════════════════════════════════════════ */
+        
+        .card {
+            background-color: white;
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-xl);
+            box-shadow: var(--shadow-md);
+            transition: all var(--transition-base);
+            border: 1px solid rgba(139, 69, 19, 0.1);
+        }
+        
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-xl);
+        }
+        
+        /* ═══════════════════════════════════════════════════════════════════════════ */
+        /* Hero Section - 大膽排版與視覺張力                                           */
+        /* ═══════════════════════════════════════════════════════════════════════════ */
+        
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--background) 0%, #F5EFE7 100%);
+            overflow: hidden;
+            padding: var(--spacing-3xl) var(--spacing-xl);
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 600px;
+            height: 600px;
+            background-color: rgba(212, 165, 116, 0.15);
+            border-radius: 50%;
+            z-index: 0;
+        }
+        
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -5%;
+            width: 500px;
+            height: 500px;
+            background-color: rgba(200, 90, 58, 0.08);
+            border-radius: 50%;
+            z-index: 0;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            margin-bottom: var(--spacing-lg);
+            animation: fadeInUp 0.8s ease-out;
+        }
+        
+        .hero-subtitle {
+            font-size: clamp(1.25rem, 3vw, 1.75rem);
+            color: var(--muted-dark);
+            margin-bottom: var(--spacing-2xl);
+            font-weight: 500;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+        
+        .hero-description {
+            font-size: 1.125rem;
+            color: var(--foreground);
+            margin-bottom: var(--spacing-2xl);
+            line-height: 1.8;
+            animation: fadeInUp 0.8s ease-out 0.4s both;
+        }
+        
+        .hero-cta {
+            display: flex;
+            gap: var(--spacing-lg);
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeInUp 0.8s ease-out 0.6s both;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* ═══════════════════════════════════════════════════════════════════════════ */
+        /* About Section - 圖文交錯與引號強調                                          */
+        /* ═══════════════════════════════════════════════════════════════════════════ */
+        
+        .about {
+            padding: var(--spacing-3xl) var(--spacing-xl);
+            background-color: white;
+        }
+        
+        .about-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-3xl);
+            align-items: center;
+        }
+        
+        .about-text {
+            position: relative;
+        }
+        
+        .about-text::before {
+            content: '"';
+            position: absolute;
+            top: -20px;
+            left: -10px;
+            font-size: 6rem;
+            color: var(--secondary);
+            opacity: 0.3;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .about-text p {
+            font-size: 1.125rem;
+            line-height: 1.9;
+            color: var(--foreground);
+            margin-bottom: var(--spacing-lg);
+        }
+        
+        .about-image {
+            position: relative;
+            border-radius: var(--radius-xl);
+            overflow: hidden;
+            box-shadow: var(--shadow-xl);
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform var(--transition-base);
+        }
+        
+        .about-image:hover img {
+            transform: scale(1.05);
+        }
+        
+        @media (max-width: 768px) {
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: var(--spacing-2xl);
+            }
+        }
+        
+        /* ═══════════════════════════════════════════════════════════════════════════ */
+        /* Services Section - 非對稱 Bento Box 網格                                    */
+        /* ═══════════════════════════════════════════════════════════════════════════ */
+        
+        .services {
+            padding: var(--spacing-3xl) var(--spacing-xl);
+            background: linear-gradient(180deg, #F5EFE7 0%, var(--background) 100%);
+        }
+        
+        .services-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--spacing-xl);
+            margin-top: var(--spacing-2xl);
+        }
+        
+        .service-card {
+            position: relative;
+            background: white;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: all var(--transition-base);
+            border: 1px solid rgba(139, 69, 19, 0.1);
+        }
+        
+        .service-card:nth-child(3n+1) {
+            grid-column: span 1;
+        }
+        
+        .service-card:nth-child(3n+2) {
+            grid-column: span 1;
+        }
+        
+        .service-card:nth-child(3n) {
+            grid-column: span 1;
+        }
+        
+        @media (min-width: 1024px) {
+            .service-card:nth-child(1) {
+                grid-column: span 2;
+                grid-row: span 2;
+            }
+            
+            .service-card:nth-child(4) {
+                grid-column: span 2;
+            }
+        }
+        
+        .service-image {
+            position: relative;
+            width: 100%;
+            height: 250px;
+            overflow: hidden;
+            background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
+        }
+        
+        .service-card:nth-child(1) .service-image {
+            height: 400px;
+        }
+        
+        .service-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform var(--transition-base);
+        }
+        
+        .service-card:hover .service-image img {
+            transform: scale(1.1);
+        }
+        
+        .service-content {
+            padding: var(--spacing-xl);
+        }
+        
+        .service-card h3 {
+            margin-bottom: var(--spacing-md);
+            color: var(--primary);
+        }
+        
+        .service-card p {
+            font-size: 0.95rem;
+            color: var(--muted-dark);
+            margin-bottom: 0;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-xl);
+        }
+        
+        /* ═══════════════════════════════════════════════════════════════════════════ */
+        /* FAQ Section - 手風琴互動設計                                               */
+        /* ═══════════════════════════════════════════════════════════════════════════ */
+        
+        .faq {
+            padding: var(--spacing-3xl) var(--spacing-xl);
+            background-color: white;
+        }
+        
+        .faq-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            margin-bottom: var(--spacing-lg);
+            border-bottom: 1px solid rgba(139, 69, 19, 0.1);
+        }
+        
+        .faq-question {
+            width: 100%;
+            padding: var(--spacing-lg);
+            background: none;
+            border: none;
+            text-align: left;
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: var(--primary);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: color var(--transition-base);
+            min-height: 44px;
+        }
+        
+        .faq-question:hover {
+            color: var(--accent);
+        }
+        
+        .faq-question:focus {
+            outline: 2px solid var(--accent);
+            outline-offset: -2px;
+            background-color: rgba(200, 90, 58, 0.05);
+        }
+        
+        .faq-toggle {
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform var(--transition-base);
+            color: var(--accent);
+        }
+        
+        .faq-item.active .faq-toggle {
+            transform: rotate(180deg);
+        }
+        
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height var(--transition-base);
+            padding: 0 var(--spacing-lg);
+        }
+        
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+            padding: 0 var(--spacing-lg) var(--spacing-lg) var(--spacing-lg);
+        }
+        
+        .faq-answer p {
+            color: var(--muted-dark);
+            margin-bottom: 0;
+        }
+        
+        /* ═══════════════════════════════════════════════════════════════════════════ */
+        /* Contact Section - 地圖與聯絡資訊                                            */
+        /* ═══════════════════════════════════════════════════════════════════════════ */
+        
+        .contact {
+            padding: var(--spacing-3xl) var(--spacing-xl);
+            background: linear-gradient(135deg, var(--background) 0%, #F5EFE7 100%);
+        }
+        
+        .contact-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-3xl);
+            align-items: start;
+        }
+        
+        .contact-info {
+            background: white;
+            padding: var(--spacing-2xl);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .contact-item {
+            display: flex;
+            gap: var(--spacing-lg);
+            margin-bottom: var(--spacing-xl);
+            align-items: flex-start;
+        }
+        
+        .contact-item:last-child {
+            margin-bottom: 0;
+        }
+        
+        .contact-icon {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(200, 90, 58, 0.1);
+            border-radius: var(--radius-lg);
+            color: var(--accent);
+            font-size: 1.25rem;
+            flex-shrink: 0;
+        }
+        
+        .contact-text h3 {
+            margin-bottom: var(--spacing-sm);
+            font-size: 1rem;
+        }
+        
+        .contact-text p {
+            margin-bottom: 0;
+            font-size: 0.95rem;
+            color: var(--muted-dark);
+        }
+        
+        .contact-text a {
+            color: var(--accent);
+            font-weight: 600;
+        }
+        
+        .map-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 100%;
+            height: 0;
+            overflow: hidden;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .map-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: var(--radius-lg);
+        }
+        
+        @media (max-width: 768px) {
+            .contact-content {
+                grid-template-columns: 1fr;
+                gap: var(--spacing-2xl);
+            }
+            
+            .map-container {
+                padding-bottom: 75%;
+            }
+        }
+        
+        /* ═══════════════════════════════════════════════════════════════════════════ */
+        /* Footer                                                                     */
+        /* ═══════════════════════════════════════════════════════════════════════════ */
+        
+        footer {
+            background-color: var(--primary);
+            color: white;
+            padding: var(--spacing-2xl) var(--spacing-xl);
+            text-align: center;
+            font-size: 0.95rem;
+        }
+        
+        footer p {
+            margin-bottom: 0;
+            color: rgba(255, 255, 255, 0.9);
+        }
+        
+        /* ═══════════════════════════════════════════════════════════════════════════ */
+        /* 無障礙設計 - 焦點指示器與鍵盤導航                                           */
+        /* ═══════════════════════════════════════════════════════════════════════════ */
+        
+        :focus-visible {
+            outline: 2px solid var(--accent);
+            outline-offset: 2px;
+        }
+        
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+        
+        /* ═══════════════════════════════════════════════════════════════════════════ */
+        /* 響應式設計                                                                 */
+        /* ═══════════════════════════════════════════════════════════════════════════ */
+        
+        @media (max-width: 640px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+            
+            .hero {
+                min-height: 80vh;
+                padding: var(--spacing-2xl) var(--spacing-md);
+            }
+            
+            .about {
+                padding: var(--spacing-2xl) var(--spacing-md);
+            }
+            
+            .services {
+                padding: var(--spacing-2xl) var(--spacing-md);
+            }
+            
+            .faq {
+                padding: var(--spacing-2xl) var(--spacing-md);
+            }
+            
+            .contact {
+                padding: var(--spacing-2xl) var(--spacing-md);
+            }
+        }
+    </style>
+    
+    <!-- JSON-LD 結構化資料 (LocalBusiness) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "吉城客棧",
+        "image": "https://scontent-sin11-2.xx.fbcdn.net/v/t39.30808-6/476109253_1164379229029463_183289178344359548_n.jpg",
+        "description": "花蓮吉安鄉隱藏版美食餐廳，提供限量牛肉麵、豬腳飯、雞腿飯等道地家常美味。溫馨客棧環境，是美食愛好者必訪的秘密食堂。",
+        "url": "https://page5888.github.io/gichen-inn/",
+        "telephone": "+886933798953",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "吉城二街159號",
+            "addressLocality": "吉安鄉",
+            "addressRegion": "花蓮縣",
+            "postalCode": "973",
+            "addressCountry": "TW"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 23.9407127,
+            "longitude": 121.5456537
+        },
+        "openingHoursSpecification": [
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+                "opens": "11:00",
+                "closes": "17:00"
+            }
+        ],
+        "sameAs": [
+            "https://www.facebook.com/gichen159/"
+        ],
+        "priceRange": "$$",
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.7",
+            "reviewCount": "165"
+        }
+    }
+    </script>
+</head>
+<body>
+    <!-- ═══════════════════════════════════════════════════════════════════════════ -->
+    <!-- Hero Section - 首頁主視覺                                                  -->
+    <!-- ═══════════════════════════════════════════════════════════════════════════ -->
+    <header class="hero" id="home">
+        <div class="hero-content">
+            <h1>吉城客棧</h1>
+            <p class="hero-subtitle">花蓮吉安鄉隱藏版美食</p>
+            <p class="hero-description">在巷弄間發現溫暖，品嚐道地家常美味。限量牛肉麵、豬腳飯、雞腿飯，每一口都是用心的滋味。</p>
+            <div class="hero-cta">
+                <a href="#services" class="btn btn-primary" aria-label="瀏覽菜色">瀏覽菜色</a>
+                <a href="#contact" class="btn btn-secondary" aria-label="聯絡我們">聯絡我們</a>
+            </div>
+        </div>
+    </header>
+    
+    <!-- ═══════════════════════════════════════════════════════════════════════════ -->
+    <!-- About Section - 品牌故事                                                   -->
+    <!-- ═══════════════════════════════════════════════════════════════════════════ -->
+    <section class="about" id="about" aria-labelledby="about-heading">
+        <div class="about-container">
+            <h2 id="about-heading">關於吉城客棧</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>吉城客棧位於花蓮吉安鄉的靜謐巷弄，是一家用心打造優質用餐環境的小型餐廳。我們相信，美食不只是填飽肚子，更是一場溫暖的對話。每一道菜都經過精心烹飪，選用新鮮食材，融入在地風味與家常溫度。無論是限量牛肉麵的鮮甜湯頭，或豬腳飯的膠質香氣，都能感受到廚師對料理的執著與熱情。</p>
+                    <p>在這裡，您不只是顧客，更是我們餐桌上的家人。我們期待每位訪客都能在吉城客棧找到屬於自己的美食故事。</p>
+                </div>
+                <div class="about-image">
+                    <img src="https://scontent-sin11-2.xx.fbcdn.net/v/t39.30808-6/627634924_1492744142859635_4913923503398126654_n.jpg?stp=c0.296.1152.1152a_cp6_dst-jpg_s206x206_tt6&_nc_cat=101&ccb=1-7&_nc_sid=5df8b4&_nc_ohc=_dPFKZZJ6tUQ7kNvwFdB2ln&_nc_oc=AdpPGtF-S6swFTDoOTsrHd6kS6JFYi033yJmJg8nDC26MTjbvob1n16YcUa1L9FVOkk&_nc_zt=23&_nc_ht=scontent-sin11-2.xx&_nc_gid=IBNFSPqepdL0qaTh43mhDw&_nc_ss=7a389&oh=00_Af1GSa3yOBr2yPnKbQ9cZ8VCV0CDwLRKnyAmGvK0kvrueg&oe=69DD0193" alt="吉城客棧溫馨的用餐環境，大片窗戶採光良好，充滿家常溫度">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- ═══════════════════════════════════════════════════════════════════════════ -->
+    <!-- Services Section - 菜色展示（非對稱 Bento Box）                            -->
+    <!-- ═══════════════════════════════════════════════════════════════════════════ -->
+    <section class="services" id="services" aria-labelledby="services-heading">
+        <div class="services-container">
+            <h2 id="services-heading">招牌菜色</h2>
+            <div class="services-grid">
+                <article class="service-card">
+                    <div class="service-image">
+                        <img src="https://scontent-sin6-1.xx.fbcdn.net/v/t39.30808-6/658947850_1542345851232797_3197780981845798088_n.jpg?stp=c0.67.810.810a_cp6_dst-jpg_s206x206_tt6&_nc_cat=111&ccb=1-7&_nc_sid=5df8b4&_nc_ohc=UnjyVdKmDS0Q7kNvwE4ftfB&_nc_oc=AdofmgVbybxrKUuAxibHUqvG0vzj_ZbjE0O-ov1HRv4LbJ43tx4WNTp9K2MP2_ycf5o&_nc_zt=23&_nc_ht=scontent-sin6-1.xx&_nc_gid=IBNFSPqepdL0qaTh43mhDw&_nc_ss=7a389&oh=00_Af3NDC5RriNmqnxd3tRUaPd91qeE6Op2m5BvKhnd_N_XkQ&oe=69DCEF70" alt="限量牛肉麵，湯頭鮮甜，牛肉與牛筋燉煮入味且軟嫩">
+                    </div>
+                    <div class="service-content">
+                        <h3>限量牛肉麵</h3>
+                        <p>湯頭鮮甜，牛肉與牛筋燉煮入味且軟嫩。每日限量供應，是店內的人氣招牌。</p>
+                    </div>
+                </article>
+                
+                <article class="service-card">
+                    <div class="service-image">
+                        <img src="https://scontent-sin2-2.xx.fbcdn.net/v/t39.30808-6/645555079_1514272877373428_6854346344724822817_n.jpg?stp=c0.202.1436.1436a_cp6_dst-jpg_s206x206_tt6&_nc_cat=103&ccb=1-7&_nc_sid=5df8b4&_nc_ohc=DTEz1lZ71SQQ7kNvwFor21S&_nc_oc=AdrYWw1HYKaVInJ3CWHpGWDRlosh_TVikDWZxNGLSb3SaejE8GPAIT2OdhlGOf_YVXA&_nc_zt=23&_nc_ht=scontent-sin2-2.xx&_nc_gid=IBNFSPqepdL0qaTh43mhDw&_nc_ss=7a389&oh=00_Af02WTvIQXLiVFObULm68Ldx9ESgAS5cfvPOPjrCaBY5xg&oe=69DCF063" alt="豬腳飯，口感Q彈、膠質豐富，深受顧客喜愛">
+                    </div>
+                    <div class="service-content">
+                        <h3>豬腳飯</h3>
+                        <p>口感Q彈、膠質豐富，搭配白飯更顯香氣。是許多老饕的必點菜色。</p>
+                    </div>
+                </article>
+                
+                <article class="service-card">
+                    <div class="service-image">
+                        <img src="https://scontent-sin2-1.xx.fbcdn.net/v/t39.30808-6/641419912_1508738127926903_5140836864695665169_n.jpg?stp=c0.296.1152.1152a_cp6_dst-jpg_s206x206_tt6&_nc_cat=102&ccb=1-7&_nc_sid=5df8b4&_nc_ohc=Cn6Kf7V-XWQQ7kNvwEB0vyP&_nc_oc=AdpeCWmGa9T5Sqr-c5V4Ta2Fja2ZQpWmxFBAusyirTYKxETaHzzkzpgtbuYSZEId6OM&_nc_zt=23&_nc_ht=scontent-sin2-1.xx&_nc_gid=IBNFSPqepdL0qaTh43mhDw&_nc_ss=7a389&oh=00_Af1TrPrcIw2kEC3m8_JWcM-zvh89RgBXc1iJ7491lUNaHw&oe=69DCE5A8" alt="雞腿飯，現點現做，外皮酥脆肉質多汁">
+                    </div>
+                    <div class="service-content">
+                        <h3>雞腿飯</h3>
+                        <p>現點現做，外皮酥脆肉質多汁。用心烹飪的每一隻雞腿，都能感受到廚師的用心。</p>
+                    </div>
+                </article>
+                
+                <article class="service-card">
+                    <div class="service-image">
+                        <img src="https://scontent-sin11-2.xx.fbcdn.net/v/t39.30808-6/491852836_1225588822908503_7390852999348973225_n.jpg?stp=c0.296.1152.1152a_cp6_dst-jpg_s206x206_tt6&_nc_cat=101&ccb=1-7&_nc_sid=5df8b4&_nc_ohc=C7sudQIkwxEQ7kNvwFpBSjS&_nc_oc=Adpn_sm7FuT5_uY2QJP-5q9gJLa0-JBnkJ6Vokw-z3l26-5k58TStVaW_26XyY3jLLA&_nc_zt=23&_nc_ht=scontent-sin11-2.xx&_nc_gid=3AFxhpq_IEd9uwYy52lZwQ&_nc_ss=7a389&oh=00_Af1Cm48yED4IjuUEpsMizbXscE6MQyrwsXJ_T4Qo382wiw&oe=69DD10C5" alt="牛小排，肉質鮮嫩，輕輕一咬即可骨肉分離">
+                    </div>
+                    <div class="service-content">
+                        <h3>牛小排</h3>
+                        <p>肉質鮮嫩，輕輕一咬即可骨肉分離。搭配湯頭更是絕妙組合。</p>
+                    </div>
+                </article>
+                
+                <article class="service-card">
+                    <div class="service-image">
+                        <img src="https://scontent-sin2-3.xx.fbcdn.net/v/t39.30808-6/592177592_1435497131917670_2600478756150183604_n.jpg?stp=cp6_dst-jpg_s206x206_tt6&_nc_cat=107&ccb=1-7&_nc_sid=6809ec&_nc_ohc=Q1jjuUmRC4oQ7kNvwEhLsJG&_nc_oc=AdrKMhzzM1C-qZ4jgTuIVkFnTYlTo0m4z3plZYm7orMYRO1o-NS5L1B6KJgmkqdXYjA&_nc_zt=23&_nc_ht=scontent-sin2-3.xx&_nc_gid=IBNFSPqepdL0qaTh43mhDw&_nc_ss=7a389&oh=00_Af0FfZgIPvnj-Y9fCoKXNZSqkOiW237HhqX_P25Hc33RCg&oe=69DD16F2" alt="精緻小菜，每日提供多樣化的家常小菜">
+                    </div>
+                    <div class="service-content">
+                        <h3>精緻小菜</h3>
+                        <p>每日提供多樣化的家常小菜，搭配主餐更顯豐富。</p>
+                    </div>
+                </article>
+                
+                <article class="service-card">
+                    <div class="service-image">
+                        <img src="https://scontent-sin6-3.xx.fbcdn.net/v/t39.30808-6/571358220_1403464381787612_1563326613774431795_n.jpg?stp=c0.169.1536.1536a_dst-jpg_s206x206_tt6&_nc_cat=110&ccb=1-7&_nc_sid=5df8b4&_nc_ohc=RLko5tN_WbAQ7kNvwG8aiOt&_nc_oc=AdqzOR7ucHQwMXAljfP5aFRbrVGTtCKunIeog6A4MdIR8IDIopbHOmegLBAvEjdnfl4&_nc_zt=23&_nc_ht=scontent-sin6-3.xx&_nc_gid=IBNFSPqepdL0qaTh43mhDw&_nc_ss=7a389&oh=00_Af1Tf2k36yiWhlZBzBRfQt9YLaLx9NZ0YUDqC026RtYHtw&oe=69DCE9E7" alt="伯爵奶茶，茶香濃郁，是餐後的人氣飲品">
+                    </div>
+                    <div class="service-content">
+                        <h3>伯爵奶茶</h3>
+                        <p>茶香濃郁，奶香滑順。是餐後的人氣飲品，讓人回味無窮。</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+    
+    <!-- ═══════════════════════════════════════════════════════════════════════════ -->
+    <!-- FAQ Section - 常見問題                                                     -->
+    <!-- ═══════════════════════════════════════════════════════════════════════════ -->
+    <section class="faq" id="faq" aria-labelledby="faq-heading">
+        <div class="faq-container">
+            <h2 id="faq-heading">常見問題</h2>
+            
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-1">
+                    <span>店家位置好找嗎？</span>
+                    <span class="faq-toggle">▼</span>
+                </button>
+                <div id="faq-answer-1" class="faq-answer">
+                    <p>吉城客棧位於花蓮縣吉安鄉干城村吉城二街159號，位於台九線干城土地公廟對面的巷子內。建議使用 Google Maps 導航搜尋「吉城客棧」，或撥打電話 +886 933 798 953 詢問詳細路線。店外有明顯的「吉城客棧」招牌，不過因為位置較隱蔽，第一次造訪建議預留多一點時間尋找。</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-2">
+                    <span>推薦必點的招牌菜是什麼？</span>
+                    <span class="faq-toggle">▼</span>
+                </button>
+                <div id="faq-answer-2" class="faq-answer">
+                    <p>吉城客棧的人氣王是「限量牛肉麵」與「豬腳飯」，這兩道菜都獲得顧客的極高評價。牛肉麵的湯頭鮮甜，牛肉與牛筋燉煮得非常入味且軟嫩；豬腳飯則以膠質豐富、口感Q彈著稱。如果您是第一次造訪，強烈建議一定要試試這兩道招牌菜。此外，「牛小排」與「雞腿飯」也是許多老饕的必點選擇。</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-3">
+                    <span>營業時間有固定嗎？</span>
+                    <span class="faq-toggle">▼</span>
+                </button>
+                <div id="faq-answer-3" class="faq-answer">
+                    <p>吉城客棧的基本營業時間為上午 11:00 至下午 17:00。週三為固定公休日。若有臨時店休（例如清明連假、農曆新年等特殊假期），店家會提前在 Facebook 粉絲專頁公告。建議在造訪前先查看 Facebook 最新消息，或撥打電話確認營業狀況，以免白跑一趟。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- ═══════════════════════════════════════════════════════════════════════════ -->
+    <!-- Contact Section - 聯絡資訊與地圖                                            -->
+    <!-- ═══════════════════════════════════════════════════════════════════════════ -->
+    <section class="contact" id="contact" aria-labelledby="contact-heading">
+        <div class="contact-container">
+            <h2 id="contact-heading">聯絡資訊</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon" aria-hidden="true">📍</div>
+                        <div class="contact-text">
+                            <h3>地址</h3>
+                            <p>花蓮縣吉安鄉干城村吉城二街159號</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon" aria-hidden="true">📞</div>
+                        <div class="contact-text">
+                            <h3>電話</h3>
+                            <p><a href="tel:+886933798953">+886 933 798 953</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon" aria-hidden="true">🕐</div>
+                        <div class="contact-text">
+                            <h3>營業時間</h3>
+                            <p>11:00 - 17:00<br>週三公休</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon" aria-hidden="true">📘</div>
+                        <div class="contact-text">
+                            <h3>Facebook</h3>
+                            <p><a href="https://www.facebook.com/gichen159/" target="_blank" rel="noopener noreferrer">吉城客棧粉絲專頁</a></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3637.8461234567890!2d121.54565!3d23.940712!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3468a18e4150af57%3A0xe52d33d0d8f90fb!2z5rK75rGf5a-M6YCV!5e0!3m2!1szh-TW!2stw!4v1234567890" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" aria-label="吉城客棧位置地圖"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- ═══════════════════════════════════════════════════════════════════════════ -->
+    <!-- Footer                                                                     -->
+    <!-- ═══════════════════════════════════════════════════════════════════════════ -->
+    <footer role="contentinfo">
+        <p>吉城客棧 ｜ 2026 Design by 花蓮瓊瑤打字行</p>
+    </footer>
+    
+    <!-- ═══════════════════════════════════════════════════════════════════════════ -->
+    <!-- 互動腳本 - FAQ 手風琴功能                                                   -->
+    <!-- ═══════════════════════════════════════════════════════════════════════════ -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const button = item.querySelector('.faq-question');
+                
+                button.addEventListener('click', function() {
+                    const isActive = item.classList.contains('active');
+                    
+                    // 關閉所有其他項目
+                    faqItems.forEach(otherItem => {
+                        otherItem.classList.remove('active');
+                        otherItem.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+                    });
+                    
+                    // 切換當前項目
+                    if (!isActive) {
+                        item.classList.add('active');
+                        button.setAttribute('aria-expanded', 'true');
+                    }
+                });
+                
+                // 鍵盤支援 - Enter 和 Space 鍵
+                button.addEventListener('keydown', function(e) {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        button.click();
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
